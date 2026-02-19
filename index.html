@@ -269,8 +269,10 @@
                 $.ajax({
                     url: proxyUrl,
                     method: 'POST',
+                    headers: {
+                        'ngrok-skip-browser-warning': 'true'
+                    },
                     contentType: 'application/json',
-
                     data: JSON.stringify(datos),
 
                     success: function (respuesta) {
